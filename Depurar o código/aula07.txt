@@ -1,0 +1,67 @@
+A lista falta alho-poró
+Neste desafio, você vai usar um comando try...catch para descobrir o que está errado.
+
+A famosa receita de sopa de Abibi não tem alho-poró na lista de ingredientes
+
+Para adicioná-lo, ela criou uma nova variável chamada leeks e passou-a para a função addIngredient() como argumento. Mas alguma coisa está causando erro no código.
+
+INSTRUÇÕES
+Use um comando try...catch para encontrar o erro.
+
+Chame a função prepareRecipeCards() no final do código para executar o programa
+Adicione um comando try...catch dentro de prepareRecipeCards()
+Exclua as três funções de dentro de prepareRecipeCards() e reinsira-as no bloco try
+Imprima o erro e com console.log() no bloco de catch
+Precisa de ajuda? Tente o fórum de suporte do Grasshopper.
+
+import { addIngredient } from 'cookbook';
+import { itemWeight, totalWeight } from 'debugging';
+let ingredients = [
+  {
+    name: 'potatoes',
+    kilos: 4,
+    ___: ___
+  },
+  {
+    name: 'carrots',
+    kilos: 2,
+    ___: ___
+  },
+  {
+    name: 'onions',
+    kilos: 1,
+    ___: ___
+  },
+  {
+    name: 'chickens',
+    kilos: 'two',
+    ___: ___
+  },
+  ___
+];
+let leeks = {
+  name: 'leeks',
+  weight: 1.5,
+  ___: ___
+};
+function printTotalWeight(___) {
+  let total = 0;
+  for (let i of ingredients) {
+    total += i.kilos;
+  }
+  print('Total ingredient weight: ' + total + ' kilos');
+};
+function printIngredient(ingredient, ___) {
+  print(ingredient.kilos + ' kilos ' + ingredient.name);
+};
+function prepareRecipeCards(___) {
+  try {
+    addIngredient(leeks, ___);
+    printTotalWeight();
+    ingredients.forEach(printIngredient(___));
+  } catch (e) {
+    console.log(e);
+  }
+};
+prepareRecipeCards();
+___
